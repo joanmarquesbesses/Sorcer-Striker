@@ -396,6 +396,8 @@ bool SceneLevel1::Start()
 	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17950, 3);
 	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -18000, 3);
 
+	// -------------------------FIN------------------------- //
+
 //-------
 	
 	//x(0 - 230)
