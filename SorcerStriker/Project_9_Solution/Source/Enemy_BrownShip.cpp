@@ -106,8 +106,8 @@ void Enemy_BrownShip::createPathing(int pathnum)
 		path.PushBack({ 0.0f, 1.0f }, 100, &idle);
 		path.PushBack({ 0.0f, 0.0f }, 25, &idle);
 		path.PushBack({ 1.0f, -0.5f }, 30, &fly);
-		path.PushBack({ 0.0f, -1.0f }, 75, &fly);
-		path.PushBack({ 300.0f, 0.0f }, 1, &fly);
+		path.PushBack({ 0.0f, -1.0f }, 100, &fly);
+		path.PushBack({ 300.0f, 300.0f }, 1, &fly);
 		path.loop = false;
 		break;
 	default:
