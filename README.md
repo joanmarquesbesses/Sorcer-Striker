@@ -39,6 +39,7 @@ Justo Tiscornia - *Artist*
 
 https://github.com/Jusstox
 
+Each one of us has a role and because of that we can work in a organizated way and that help us to make this videogame. Besides we have our role, everyone work a little bit at thing out of their role like all of us work at makeing the sprites of the videogames, work at the code of the program
 
 ## **Group Photo**
 
