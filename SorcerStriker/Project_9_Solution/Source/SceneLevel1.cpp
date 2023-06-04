@@ -98,7 +98,7 @@ bool SceneLevel1::Start()
 	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -3950, 3);
 	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -4000, 3);
 	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -4050, 3);
-	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -3850, 3);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -4100, 3);
 	
 	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 50, -3850, 0);
 	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 100, -3850, 0);
@@ -300,9 +300,6 @@ bool SceneLevel1::Start()
 	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 50, -13150, 0);
 	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 100, -13150, 0);
 
-	//App->enemies->AddEnemy(Enemy_Type::TANK, -50, -13250, 1);//-1800
-	//App->enemies->AddEnemy(Enemy_Type::TANK, -90, -13250, 1);
-
 	App->enemies->AddEnemy(Enemy_Type::TANK, 320, -13350, 0);//-1800
 	App->enemies->AddEnemy(Enemy_Type::TANK, 280, -13350, 0);
 
@@ -331,12 +328,79 @@ bool SceneLevel1::Start()
 	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -14200, 3);
 	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -14250, 3);
 
+	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 150, -14250, 0);
+	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 200, -14250, 0);
+
+	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 50, -14350, 0);
+	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 100, -14350, 0);
+
+	App->enemies->AddEnemy(Enemy_Type::TANK, -50, -14386, 1);//-1800
+	App->enemies->AddEnemy(Enemy_Type::TANK, -90, -14386, 1);
+
+	App->enemies->AddEnemy(Enemy_Type::TANK, 320, -14550, 0);//-1800
+	App->enemies->AddEnemy(Enemy_Type::TANK, 280, -14550, 0);
+
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -14650, 2);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -14700, 2);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -14750, 2);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -14800, 2);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -14850, 2);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -14900, 2);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -14950, 2);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -15000, 2);
+
+	App->enemies->AddEnemy(Enemy_Type::MECH, 5, -15000, 0); //entre los REDBIRDS
+	App->enemies->AddEnemy(Enemy_Type::MECH, 150, -15000, 0); //entre los REDBIRDS
+
+// -------------------------FINAL BOSS------------------------- //
+
+	App->enemies->AddEnemy(Enemy_Type::FINALBOSS, 0, -17000, 0);//-17000
+
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 50, -17200, 0);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 50, -17250, 0);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 50, -17300, 0);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 50, -17350, 0);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 50, -17400, 0);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 50, -17450, 0);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 50, -17500, 0);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 50, -17550, 0);
+
+	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 150, -17550, 0);
+	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 200, -17550, 0);
+
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17200, 1);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17250, 1);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17300, 1);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17350, 1);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17400, 1);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17450, 1);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17500, 1);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17550, 1);
+
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -17750, 2);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -17800, 2);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -17850, 2);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -17900, 2);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -17950, 2);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -18000, 2);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -18050, 2);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 125, -18150, 2);
+
+	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 50, -18150, 0);
+	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 100, -18150, 0);
+
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17750, 3);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17800, 3);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17850, 3);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17900, 3);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17950, 3);
+	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -18000, 3);
 
 //-------
 	
 	//x(0 - 230)
 	
-	App->enemies->AddEnemy(Enemy_Type::FINALBOSS, 0, -17000, 0);//-17000
+	
 
 	App->render->camera.x = 0;
 	App->render->camera.y = 0;
