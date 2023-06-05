@@ -13,7 +13,12 @@
 
 SceneLevel1::SceneLevel1(bool startEnabled) : Module(startEnabled)
 {
-
+	warning.PushBack({ 0, 0, 218, 77 });
+	warning.PushBack({ 219, 0, 218, 77 });
+	warning.PushBack({ 0, 78, 218, 77 });
+	warning.PushBack({ 219, 0, 218, 77 });
+	warning.speed = 0.1f;
+	warning.loop = true;
 }
 
 SceneLevel1::~SceneLevel1()
@@ -56,7 +61,7 @@ bool SceneLevel1::Start()
 	bosswarning = App->audio->LoadFx("Assets/Fx/WARNING JEFE DRAGON.wav");
 
 	changeBG = 0;
-
+	warningTexture = App->textures->Load("Assets/Sprites/Warning.png");
 //Enemies ---
 
 	// red bird 50 px margin
@@ -434,6 +439,7 @@ bool SceneLevel1::Start()
 	sceneIntro.resetTimer();
 	bossm = false;
 	bosssf = false;
+	warningShown = false;
 
 	state = Scene_States::INTRO;
 
@@ -447,10 +453,12 @@ Update_Status SceneLevel1::Update()
 	if (App->player->position.y < -15500 && !bosssf) {
 		App->audio->PlayFx(bosswarning);
 		bosssf = true;
+		warningShown = true;
 	}
 	if (App->player->position.y < -16500 && !bossm) {
 		bossm = true;
 		App->audio->PlayBossMusic();
+		warningShown = false;
 	}
 
 	sceneIntro.refreshTimer();
@@ -476,7 +484,6 @@ Update_Status SceneLevel1::PostUpdate()
 	if (App->player->autowin) {
 		App->enemies->Disable();
 	}
-
 
 	if (bgRect[0].y > App->render->camera.y + App->render->camera.h) {
 		bgRect[0].y = bgRect[1].y - bgRect[1].h;
@@ -636,6 +643,15 @@ Update_Status SceneLevel1::PostUpdate()
 		break;
 	default:
 		break;
+	}
+
+	if (warningShown) {
+		warning.Update();
+		SDL_Rect rect = warning.GetCurrentFrame();
+		App->render->Blit(warningTexture, 20, 40, &rect, 0.0f, false);
+		if (warning.HasFinished()) {
+			warningShown = false;
+		}
 	}
 
 	return Update_Status::UPDATE_CONTINUE;
