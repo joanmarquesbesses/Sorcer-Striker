@@ -21,7 +21,7 @@ Sorcer Striker, known in Japan as Mahou Daisakusen is a vertically scrolling sho
 
 Salvador Bernades - *Designer*
 
-[https://github.com/SalvaBernades](https://github.com/SalvaBernades)
+[https://github.com/SalvaBernades]
 
 Andrea Doña - *Managment*
 
@@ -61,7 +61,9 @@ Each one of us has a role and because of that we can work in a organizated way a
   **F4** - Insta Lose
 
   **F5** - Camera lock
-
+  
+  **F6-F10** - Spawn enemies
+  
   **W** - move up camera
  
   **A** - move left camera
