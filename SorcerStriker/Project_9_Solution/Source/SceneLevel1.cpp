@@ -63,7 +63,7 @@ bool SceneLevel1::Start()
 
 // -------------------------BOSQUE------------------------- //
 
-	App->boost->AddBoost(Boost_Type::LASERFIST, 120, -1800);//-1800
+	App->boost->AddBoost(Boost_Type::LASERFIST, 120, -1800);//-1800 BOOST
 	App->boost->AddBoost(Boost_Type::COINBAG, 120, -1500);//-1800
 
 	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 50, -2200, 0);
@@ -123,7 +123,7 @@ bool SceneLevel1::Start()
 
 // ----------------------------AGUA---------------------------- //
 
-	App->boost->AddBoost(Boost_Type::LASERFIST, 120, -5850);
+	App->boost->AddBoost(Boost_Type::LASERFIST, 120, -5850);// BOOST
 
 	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 50, -5850, 0);
 	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 100, -5850, 0);
@@ -184,7 +184,7 @@ bool SceneLevel1::Start()
 
 // -------------------------CASTILLO------------------------- //
 
-	App->boost->AddBoost(Boost_Type::LASERFIST, 120, -9055);
+	App->boost->AddBoost(Boost_Type::LASERFIST, 120, -9055); // BOOST 
 
 	// tank amb 320 queda al limit
 	App->enemies->AddEnemy(Enemy_Type::TANK, 320, -9055, 0);//-1800
@@ -234,6 +234,8 @@ bool SceneLevel1::Start()
 	App->enemies->AddEnemy(Enemy_Type::TANK, -90, -10665, 1);
 
 // -------------------------ALDEA------------------------- //
+
+	App->boost->AddBoost(Boost_Type::LASERFIST, 120, -10850);// BOOST
 
 	App->enemies->AddEnemy(Enemy_Type::TANK, 320, -10850, 0);//-1800
 	App->enemies->AddEnemy(Enemy_Type::TANK, 280, -10850, 0);
@@ -290,6 +292,8 @@ bool SceneLevel1::Start()
 
 	App->enemies->AddEnemy(Enemy_Type::TANK, -50, -12731, 1);//-1800
 	App->enemies->AddEnemy(Enemy_Type::TANK, -90, -12731, 1);
+
+	App->boost->AddBoost(Boost_Type::LASERFIST, 120, -12800);// BOOST
 
 	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 50, -12800, 0);
 	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 50, -12850, 0);
@@ -357,6 +361,8 @@ bool SceneLevel1::Start()
 	App->enemies->AddEnemy(Enemy_Type::MECH, 150, -15000, 0); //entre los REDBIRDS
 
 // -------------------------FINAL BOSS------------------------- //
+
+	App->boost->AddBoost(Boost_Type::LASERFIST, 120, -16000);// BOOST
 
 	App->enemies->AddEnemy(Enemy_Type::FINALBOSS, 0, -17000, 0);//-17000
 
