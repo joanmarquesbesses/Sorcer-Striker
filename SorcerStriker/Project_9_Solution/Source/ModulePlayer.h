@@ -93,6 +93,8 @@ public:
 	bool autolose = false;
 	bool canMove = false;
 
+	bool runfinished = false;
+
 	Player_States State;
 
 	SDL_Texture* winTexture = nullptr;

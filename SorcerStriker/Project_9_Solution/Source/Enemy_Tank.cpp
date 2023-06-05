@@ -30,7 +30,7 @@ Enemy_Tank::Enemy_Tank(int x, int y) : Enemy(x, y)
 
 	collider = App->collisions->AddCollider({ 0, 0, 35, 31 }, Collider::Type::ENEMY, (Module*)App->enemies);
 
-	lives = 5;
+	lives = 4;
 	shooted = false;
 	shootDelay.setTimer(2000);
 }

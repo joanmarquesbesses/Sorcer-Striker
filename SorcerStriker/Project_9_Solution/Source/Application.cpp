@@ -31,10 +31,10 @@ Application::Application()
 	modules[4] =	sceneIntro =	new SceneIntro(true);
 	modules[5] =    sceneMenu =     new SceneMenu(false);
 	modules[6] =	sceneLevel_1 =	new SceneLevel1(false);		//Gameplay scene starts disabled
-	modules[7] =	player =		new ModulePlayer(false);	//Player starts disabled
-	modules[8] =	enemies =		new ModuleEnemies(false);	//Enemies start disabled
-	modules[9] =	particles =		new ModuleParticles(true);
-	modules[10] =	boost =			new ModuleBoost(true);
+	modules[7] =	enemies =		new ModuleEnemies(false);	//Enemies start disabled
+	modules[8] =	particles =		new ModuleParticles(true);
+	modules[9] =	boost =			new ModuleBoost(true);
+	modules[10] =   player =        new ModulePlayer(false);
 
 	modules[11] =	collisions =	new ModuleCollisions(true);
 	modules[12] =	fade =			new ModuleFadeToBlack(true);

@@ -23,7 +23,12 @@ Boost_CoinBag::Boost_CoinBag(int x, int y) : Boost(x, y)
 	goingOut.loop = true;
 
 	GoIn.PushBack({ 0.0f, 2.0f }, 100);
-	GoIn.PushBack({ 0.0f, 0.0f }, 100);
+	GoIn.PushBack({ -1.0f, -1.0f }, 30);
+	GoIn.PushBack({ 1.0f, 1.0f }, 60);
+	GoIn.PushBack({ 1.0f, -1.0f }, 60);
+	GoIn.PushBack({ -1.0f, 1.0f }, 60);
+	GoIn.PushBack({ -1.0f, -1.0f }, 60);
+	GoIn.PushBack({ 1.0f, 1.0f }, 60);
 	GoIn.loop = false;
 
 	GoOut.PushBack({ 0.0f, -2.0f }, 100);

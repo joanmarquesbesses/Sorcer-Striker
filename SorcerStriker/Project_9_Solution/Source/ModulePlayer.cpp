@@ -10,6 +10,7 @@
 #include "ModuleFadeToBlack.h"
 #include "ModuleFonts.h"
 #include "ModuleBoost.h"
+#include "ModuleEnemies.h"
 
 #include <stdio.h>
 
@@ -69,7 +70,7 @@ bool ModulePlayer::Start()
 	autolose = false;
 	godMode = false;
 	State = Player_States::INTRO;
-	runfinished = true;
+	runfinished = false;
 
 	texture = App->textures->Load("Assets/Sprites/naves_bien_4.png");
 	winTexture = App->textures->Load("Assets/Sprites/Stage_clear.png");
@@ -264,6 +265,19 @@ Update_Status ModulePlayer::Update()
 			App->audio->PlayFx(gameover, 0);
 			State = Player_States::DESTROYED;
 		}
+	}
+
+	if (App->input->keys[SDL_SCANCODE_F6] == KEY_DOWN) {
+		App->enemies->AddEnemy(Enemy_Type::REDBIRD, 100, position.y - 600, 0);
+	}
+	if (App->input->keys[SDL_SCANCODE_F7] == KEY_DOWN) {
+		App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 100, position.y - 600, 0);
+	}
+	if (App->input->keys[SDL_SCANCODE_F8] == KEY_DOWN) {
+		App->enemies->AddEnemy(Enemy_Type::MECH, 100, position.y - 600, 0);
+	}
+	if (App->input->keys[SDL_SCANCODE_F9] == KEY_DOWN) {
+		App->enemies->AddEnemy(Enemy_Type::TANK, 100, position.y - 600, 0);
 	}
 
 	if (collider != nullptr) {
