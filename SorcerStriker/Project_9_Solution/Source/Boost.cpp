@@ -50,7 +50,14 @@ void Boost::OnCollision(Collider* collider)
 	if (collider->type != Collider::Type::PLAYER_SHOT) {
 		taken = true;
 		App->audio->PlayFx(destroyedFx);
-		App->player->activeBoost = this;
+		if (App->player->activeBoost != nullptr) {
+			App->player->activeBoost->pendingToDelete = true;
+			App->player->activeBoost->taken = false;
+			destroyed = true;
+		}
+		else {
+			App->player->activeBoost = this;
+		}
 		SetToDelete();
 	}
 }
