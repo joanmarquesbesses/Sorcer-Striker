@@ -179,6 +179,19 @@ void ModuleEnemies::HandleEnemiesDespawn()
 	}
 }
 
+void ModuleEnemies::killAllEnemiesAlive()
+{
+	for (uint i = 0; i < MAX_ENEMIES; ++i)
+	{
+		if (enemies[i] != nullptr)
+		{
+			if (enemies[i]->Boss == false) {
+				enemies[i]->SetToDelete();
+			}
+		}
+	}
+}
+
 void ModuleEnemies::SpawnEnemy(const EnemySpawnpoint& info)
 {
 	// Find an empty slot in the enemies array

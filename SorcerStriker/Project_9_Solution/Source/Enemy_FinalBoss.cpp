@@ -75,7 +75,7 @@ Enemy_FinalBoss::Enemy_FinalBoss(int x, int y) : Enemy(x, y)
 
 	shoots = 4;
 	delaybts.setTimer(300);
-	shootDelay.setTimer(3000);
+	shootDelay.setTimer(2500);
 	collider = App->collisions->AddCollider({ 0, 0, 33, 47 }, Collider::Type::ENEMY, (Module*)App->enemies);
 	leftHead = App->collisions->AddCollider({ 0, 0, 31, 46 }, Collider::Type::ENEMY, (Module*)App->enemies);
 	rigthHead = App->collisions->AddCollider({ 0, 0, 31, 46 }, Collider::Type::ENEMY, (Module*)App->enemies);

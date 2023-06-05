@@ -180,7 +180,10 @@ Update_Status ModulePlayer::Update()
 		if (App->input->keys[SDL_SCANCODE_LCTRL] == Key_State::KEY_DOWN || App->input->pads->b)
 		{
 			if (specialshoot > 0) {
-
+				Particle* newParticle = App->particles->AddParticle(App->particles->specialShoot, position.x - 50, App->render->camera.y + 100);
+				newParticle = nullptr;
+				App->enemies->killAllEnemiesAlive();
+				specialshoot--;
 			}
 		}
 
@@ -278,6 +281,9 @@ Update_Status ModulePlayer::Update()
 	}
 	if (App->input->keys[SDL_SCANCODE_F9] == KEY_DOWN) {
 		App->enemies->AddEnemy(Enemy_Type::TANK, 100, position.y - 600, 0);
+	}
+	if (App->input->keys[SDL_SCANCODE_F10] == KEY_DOWN) {
+		App->enemies->AddEnemy(Enemy_Type::FINALBOSS, 0, position.y - 600, 0);
 	}
 
 	if (collider != nullptr) {
