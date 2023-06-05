@@ -59,11 +59,14 @@ public:
 	SDL_Texture* bgTextureFinal = nullptr;
 	SDL_Rect bgRect[2];
 	SDL_Rect bgRectAux[2];
+	SDL_Texture* warningTexture = nullptr;
+	Animation warning;
 
 	int changeBG;
 	int bosswarning = 0;
 	bool bossm = false;
 	bool bosssf = false;
+	bool warningShown = false;
 
 	Scene_States state;
 	bool start;

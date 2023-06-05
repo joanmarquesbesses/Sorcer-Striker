@@ -183,7 +183,6 @@ Update_Status ModulePlayer::Update()
 				newParticle = nullptr;
 				App->enemies->killAllEnemiesAlive();
 				specialshoot--;
-				App->input->pads->b = false;
 			}
 		}
 
@@ -293,7 +292,7 @@ Update_Status ModulePlayer::Update()
 	currentAnimation->Update();
 
 	// PRESS esc TO QUIT
-	if (App->input->keys[SDL_SCANCODE_ESCAPE] == Key_State::KEY_DOWN)
+	if (App->input->keys[SDL_SCANCODE_ESCAPE] == Key_State::KEY_DOWN && State != Player_States::INTRO)
 	{
 		if (collider != nullptr) {
 			collider->pendingToDelete = true;
@@ -338,6 +337,10 @@ Update_Status ModulePlayer::PostUpdate()
 
 	App->fonts->BlitText(5, 23, scoreFont, "booms");
 	App->fonts->BlitText(35, 23, scoreFont, boombsText);
+
+	if (godMode) {
+		App->fonts->BlitText(5, 33, scoreFont, "godmode");
+	}
 
 	return Update_Status::UPDATE_CONTINUE;
 }
