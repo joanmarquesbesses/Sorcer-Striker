@@ -86,7 +86,9 @@ Each one of us has a role and because of that we can work in a organizated way a
   
   **Left Ctrl** (special shoot)
   
-  ## **GamePad:**
+  
+  
+  **GamePad:**
   
   **Up Joystick** (move up)
 
