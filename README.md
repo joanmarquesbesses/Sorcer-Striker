@@ -3,6 +3,7 @@
 ## **Github Page:**
 
   https://github.com/joanmarquesbesses/Sorcer-Striker/wiki
+  https://joanmarquesbesses.github.io/Sorcer-Striker/
   
   
 ## **Cosmic Games Logo**
