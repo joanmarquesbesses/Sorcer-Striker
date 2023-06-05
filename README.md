@@ -86,6 +86,20 @@ Each one of us has a role and because of that we can work in a organizated way a
   
   **Left Ctrl** (special shoot)
   
+  ## **GamePad:**
+  
+  **Up Joystick** (move up)
+
+  **Down Joystick** (move down)
+
+  **Left Joystick** (move left)
+
+  **Rigth Joystick** (move rigth)
+
+  **A button** (shoot)
+
+  **B button** (scpecial shoot)
+  
 ## Release
 
 [https://github.com/joanmarquesbesses/Sorcer-Striker/releases/tag/release](https://github.com/joanmarquesbesses/Sorcer-Striker/releases/tag/release)
