@@ -86,21 +86,19 @@ Each one of us has a role and because of that we can work in a organizated way a
   
   **Left Ctrl** (special shoot)
   
-  
-  
 -  **GamePad:**
   
-  **Up Joystick** (move up)
+    **Up Joystick** (move up)
 
-  **Down Joystick** (move down)
+   **Down Joystick** (move down)
 
-  **Left Joystick** (move left)
+   **Left Joystick** (move left)
 
-  **Rigth Joystick** (move rigth)
-
-  **A button** (shoot)
-
-  **B button** (scpecial shoot)
+    **Rigth Joystick** (move rigth)
+  
+    **A button** (shoot)
+  
+    **B button** (scpecial shoot)
   
 ## Release
 
