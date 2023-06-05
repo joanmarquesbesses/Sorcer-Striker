@@ -102,15 +102,10 @@ bool ModuleBoost::CleanUp()
 	App->textures->Unload(textureBox_LaserFist);
 	App->textures->Unload(textureBoost_LaserFist);
 	App->textures->Unload(texture_CoinBag);
-	App->textures->Unload(textureBox_Axe);
-	App->textures->Unload(textureBoost_Axe);
 	textureBox_LaserFist = nullptr;
 	textureBoost_LaserFist = nullptr;
 	texture_CoinBag = nullptr;
-	textureBox_Axe = nullptr;
-	textureBoost_Axe = nullptr;
 	App->audio->Unload(boostFX);
-	App->audio->Unload(coinFX);
 
 	return true;
 }
