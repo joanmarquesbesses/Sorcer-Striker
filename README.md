@@ -61,6 +61,8 @@ Each one of us has a role and because of that we can work in a organizated way a
   **F4** - Insta Lose
 
   **F5** - Camera lock
+  
+  **F6-F10** - Spawn enemies
 
   **W** - move up camera
  
