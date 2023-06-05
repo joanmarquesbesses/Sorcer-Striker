@@ -55,9 +55,11 @@ void Boost::OnCollision(Collider* collider)
 			App->player->activeBoost->taken = false;
 			App->player->activeBoost->destroyed = true;
 			App->player->activeBoost = this;
+			App->player->specialshoot = 1;
 		}
 		else {
 			App->player->activeBoost = this;
+			App->player->specialshoot = 1;
 		}
 		SetToDelete();
 	}

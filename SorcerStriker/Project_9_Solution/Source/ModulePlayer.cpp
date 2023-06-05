@@ -48,8 +48,6 @@ ModulePlayer::ModulePlayer(bool startEnabled) : Module(startEnabled)
 	rollAnim.speed = 0.3f;
 	rollAnim.loop = false;
 
-	specialshoot = 3;
-
 }
 
 ModulePlayer::~ModulePlayer()
@@ -92,7 +90,7 @@ bool ModulePlayer::Start()
 	speed = 4;
 	playerWidth = 39;
 	playerHeigth = 42;
-	specialshoot = 3;
+	specialshoot = 1;
 
 	activeBoost = nullptr;
 	collider = App->collisions->AddCollider({ position.x + 9, position.y + 6, 21, 30 }, Collider::Type::PLAYER, this);
