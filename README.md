@@ -101,6 +101,10 @@ Each one of us has a role and because of that we can work in a organizated way a
     **A button** (shoot)
   
     **B button** (scpecial shoot)
+    
+## **GamePlay**
+
+
   
 ## Release
 
