@@ -123,6 +123,8 @@ bool SceneLevel1::Start()
 
 // ----------------------------AGUA---------------------------- //
 
+	App->boost->AddBoost(Boost_Type::LASERFIST, 120, -5850);
+
 	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 50, -5850, 0);
 	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 100, -5850, 0);
 
@@ -181,6 +183,8 @@ bool SceneLevel1::Start()
 //-----
 
 // -------------------------CASTILLO------------------------- //
+
+	App->boost->AddBoost(Boost_Type::LASERFIST, 120, -9055);
 
 	// tank amb 320 queda al limit
 	App->enemies->AddEnemy(Enemy_Type::TANK, 320, -9055, 0);//-1800
