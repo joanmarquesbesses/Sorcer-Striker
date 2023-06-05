@@ -9,6 +9,7 @@ enum class Boost_Type
 	LASERFIST,
 	COINBAG,
 	COIN,
+	AXE,
 };
 
 #define MAX_BOOST 10
@@ -80,6 +81,7 @@ private:
 	SDL_Texture* textureBox_LaserFist = nullptr;
 	SDL_Texture* textureBoost_LaserFist = nullptr;
 	SDL_Texture* texture_CoinBag = nullptr;
+	SDL_Texture* textureBox_Axe = nullptr;
 
 	// The audio fx for destroying an enemy
 	int boostFX = 0;

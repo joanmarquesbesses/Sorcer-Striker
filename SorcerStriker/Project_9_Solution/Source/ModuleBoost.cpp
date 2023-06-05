@@ -10,6 +10,7 @@
 #include "Boost_LaserFist.h"
 #include "Boost_CoinBag.h"
 #include "Boost_Coin.h"
+#include "Boost_Axe.h"
 
 #define SPAWN_MARGIN 50
 
@@ -32,6 +33,8 @@ bool ModuleBoost::Start()
 	texture_CoinBag = App->textures->Load("Assets/Sprites/Bolsa_monedas.png");
 	boostFX = App->audio->LoadFx("Assets/Fx/Todos los power ups.wav");
 	coinFX = App->audio->LoadFx("Assets/Fx/Pillas moneda.wav");
+	textureBox_Axe = App->textures->Load("Assets/Sprites/Boost_Hachas.png");
+	textureBoost_Axe = App->textures->Load("Assets/Sprites/proyectiles.png");
 	
 	return true;
 }
@@ -189,6 +192,12 @@ void ModuleBoost::SpawnBoost(const BoostSpawnpoint& info)
 				Boosts[i]->destroyedFx = coinFX;
 				Boosts[i]->textureBoostBox = texture_CoinBag;
 				Boosts[i]->textureBoost = texture_CoinBag;
+				break;
+			case Boost_Type::AXE:
+				Boosts[i] = new Boost_Coin(info.x, info.y);
+				Boosts[i]->destroyedFx = boostFX;
+				Boosts[i]->textureBoostBox = textureBox_Axe;
+				Boosts[i]->textureBoost = textureBoost_Axe;
 				break;
 			}
 			break;
