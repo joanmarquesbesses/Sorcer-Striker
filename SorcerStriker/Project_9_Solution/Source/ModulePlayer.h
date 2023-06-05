@@ -105,6 +105,7 @@ public:
 	Timer spawnInvul;
 
 	int specialshoot;
+	char boombsText[10] = { "\0" };
 
 	Boost* activeBoost;
 };

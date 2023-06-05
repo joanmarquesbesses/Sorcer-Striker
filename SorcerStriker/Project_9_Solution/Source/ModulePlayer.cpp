@@ -92,6 +92,7 @@ bool ModulePlayer::Start()
 	speed = 4;
 	playerWidth = 39;
 	playerHeigth = 42;
+	specialshoot = 3;
 
 	activeBoost = nullptr;
 	collider = App->collisions->AddCollider({ position.x + 9, position.y + 6, 21, 30 }, Collider::Type::PLAYER, this);
@@ -180,7 +181,7 @@ Update_Status ModulePlayer::Update()
 		if (App->input->keys[SDL_SCANCODE_LCTRL] == Key_State::KEY_DOWN || App->input->pads->b)
 		{
 			if (specialshoot > 0) {
-				Particle* newParticle = App->particles->AddParticle(App->particles->specialShoot, position.x - 50, App->render->camera.y + 100);
+				Particle* newParticle = App->particles->AddParticle(App->particles->specialShoot, position.x - 50, App->render->camera.y + 100, Collider::Type::NONE);
 				newParticle = nullptr;
 				App->enemies->killAllEnemiesAlive();
 				specialshoot--;
@@ -327,6 +328,7 @@ Update_Status ModulePlayer::PostUpdate()
 	// Draw UI (score) --------------------------------------
 	sprintf_s(scoreText, 10, "%7d", score);
 	sprintf_s(livesText, 10, "%7d", lives);
+	sprintf_s(boombsText, 10, "%7d", specialshoot);
 
 	// TODO 3: Blit the text of the score in at the bottom of the screen
 	App->fonts->BlitText(5, 3, scoreFont, "score");
@@ -334,6 +336,9 @@ Update_Status ModulePlayer::PostUpdate()
 
 	App->fonts->BlitText(5, 13, scoreFont, "lives");
 	App->fonts->BlitText(35, 13, scoreFont, livesText);
+
+	App->fonts->BlitText(5, 23, scoreFont, "booms");
+	App->fonts->BlitText(35, 23, scoreFont, boombsText);
 
 	return Update_Status::UPDATE_CONTINUE;
 }
