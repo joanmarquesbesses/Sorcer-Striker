@@ -145,6 +145,7 @@ void Enemy_FinalBoss::Update()
 			this->pendingToDelete = true;
 			state = States::DEAD;
 			App->player->score += 1000;
+			App->player->runfinished = true;
 		}
 		break;
 	case States::DEAD:

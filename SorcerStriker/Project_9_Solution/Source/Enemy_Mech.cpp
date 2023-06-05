@@ -84,10 +84,10 @@ void Enemy_Mech::Update()
 			direction = (player - bola);
 			direction.Unit();
 			if (player.y < bola.y) {
-				shoot->path.PushBack({ (direction.x), (direction.y ) * 4.0f}, 25, &shoot->anim);
+				shoot->path.PushBack({ (direction.x), (direction.y ) * 4.0f}, 250, &shoot->anim);
 			}
 			else {
-				shoot->path.PushBack({ (direction.x), (direction.y) * 0.05f }, 25, &shoot->anim);
+				shoot->path.PushBack({ (direction.x), (direction.y) * 0.05f }, 250, &shoot->anim);
 			}
 			shoot = nullptr;
 			maxShoots--;

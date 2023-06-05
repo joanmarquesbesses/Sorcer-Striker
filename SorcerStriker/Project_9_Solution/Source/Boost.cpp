@@ -53,7 +53,8 @@ void Boost::OnCollision(Collider* collider)
 		if (App->player->activeBoost != nullptr) {
 			App->player->activeBoost->pendingToDelete = true;
 			App->player->activeBoost->taken = false;
-			destroyed = true;
+			App->player->activeBoost->destroyed = true;
+			App->player->activeBoost = this;
 		}
 		else {
 			App->player->activeBoost = this;

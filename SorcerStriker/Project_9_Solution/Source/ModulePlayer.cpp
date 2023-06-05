@@ -69,6 +69,7 @@ bool ModulePlayer::Start()
 	autolose = false;
 	godMode = false;
 	State = Player_States::INTRO;
+	runfinished = true;
 
 	texture = App->textures->Load("Assets/Sprites/naves_bien_4.png");
 	winTexture = App->textures->Load("Assets/Sprites/Stage_clear.png");
@@ -175,12 +176,12 @@ Update_Status ModulePlayer::Update()
 			}
 		}
 
-	/*	if (App->input->keys[SDL_SCANCODE_LCTRL] == Key_State::KEY_DOWN || App->input->pads->b)
+		if (App->input->keys[SDL_SCANCODE_LCTRL] == Key_State::KEY_DOWN || App->input->pads->b)
 		{
 			if (specialshoot > 0) {
 
 			}
-		}*/
+		}
 
 		// If no up/down movement detected, set the current animation back to idle
 		if (App->input->keys[SDL_SCANCODE_LEFT] == Key_State::KEY_IDLE
@@ -237,6 +238,14 @@ Update_Status ModulePlayer::Update()
 
 	if (App->input->keys[SDL_SCANCODE_F2] == KEY_DOWN)
 		godMode = !godMode;
+
+	if (runfinished && !autowin && !autolose) {
+		changeScene.resetTimer();
+		autowin = true;
+		App->audio->PlayFx(roundclear, 0);
+		State = Player_States::DESTROYED;
+		runfinished = false;
+	}
 
 	if (App->input->keys[SDL_SCANCODE_F3] == KEY_DOWN) {
 		if (!autowin && !autolose) {
