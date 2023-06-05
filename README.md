@@ -84,6 +84,8 @@ Each one of us has a role and because of that we can work in a organizated way a
 
   **Space interact**(scenes) - in-game shoot
   
+  **Left Ctrl** (special shoot)
+  
 ## Release
 
 [https://github.com/joanmarquesbesses/Sorcer-Striker/releases/tag/release](https://github.com/joanmarquesbesses/Sorcer-Striker/releases/tag/release)
