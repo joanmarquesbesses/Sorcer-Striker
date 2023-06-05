@@ -67,6 +67,7 @@ public:
 
 	Particle witchfireballreleased;
 	Particle finalbossfireball;
+	Particle specialShoot;
 
 private:
 	// Particles spritesheet loaded into an SDL Texture

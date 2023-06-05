@@ -102,6 +102,8 @@ public:
 	Timer shootdelay;
 	Timer spawnInvul;
 
+	int specialshoot;
+
 	Boost* activeBoost;
 };
 
