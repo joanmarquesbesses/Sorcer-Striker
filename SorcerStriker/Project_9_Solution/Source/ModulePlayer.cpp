@@ -47,6 +47,8 @@ ModulePlayer::ModulePlayer(bool startEnabled) : Module(startEnabled)
 	rollAnim.speed = 0.3f;
 	rollAnim.loop = false;
 
+	specialshoot = 3;
+
 }
 
 ModulePlayer::~ModulePlayer()
@@ -172,6 +174,13 @@ Update_Status ModulePlayer::Update()
 				shootdelay.resetTimer();
 			}
 		}
+
+	/*	if (App->input->keys[SDL_SCANCODE_LCTRL] == Key_State::KEY_DOWN || App->input->pads->b)
+		{
+			if (specialshoot > 0) {
+
+			}
+		}*/
 
 		// If no up/down movement detected, set the current animation back to idle
 		if (App->input->keys[SDL_SCANCODE_LEFT] == Key_State::KEY_IDLE
