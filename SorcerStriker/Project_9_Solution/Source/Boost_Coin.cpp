@@ -28,9 +28,9 @@ Boost_Coin::Boost_Coin(int x, int y) : Boost(x, y)
 void Boost_Coin::Update()
 {
 	GoOut.Update();
+	spawnPos.y -= App->render->cameraSpeed;
 	position = spawnPos + GoOut.GetRelativePosition();
 	Boost::Update();
-	spawnPos.y -= App->render->cameraSpeed;
 }
 
 void Boost_Coin::OnCollision(Collider* collider)

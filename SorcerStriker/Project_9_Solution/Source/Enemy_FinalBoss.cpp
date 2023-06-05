@@ -8,7 +8,7 @@
 Enemy_FinalBoss::Enemy_FinalBoss(int x, int y) : Enemy(x, y)
 {
 	state = States::FULLHP;
-	lives = 30;
+	lives = 60;
 	lasthit = 0;
 	Boss = true;
 
@@ -96,7 +96,7 @@ void Enemy_FinalBoss::Update()
 		collider->SetPos(position.x + 111, position.y + 74);
 		leftHead->SetPos(position.x + 47, position.y + 70);
 		rigthHead->SetPos(position.x + 177, position.y + 70);
-		if (lives < 20) {
+		if (lives < 40) {
 			if (lasthit == 0) {
 				state = States::LEFTHEAD;
 				rigthHead->pendingToDelete = true;
@@ -120,7 +120,7 @@ void Enemy_FinalBoss::Update()
 	case States::LEFTHEAD:
 		collider->SetPos(position.x + 111, position.y + 74);
 		leftHead->SetPos(position.x + 47, position.y + 70);
-		if (lives < 10) {
+		if (lives < 20) {
 			state = States::ONEHEAD;
 			leftHead->pendingToDelete = true;
 			leftHead = nullptr;
@@ -130,7 +130,7 @@ void Enemy_FinalBoss::Update()
 	case States::RIGHTHEAD:
 		collider->SetPos(position.x + 111, position.y + 74);
 		rigthHead->SetPos(position.x + 177, position.y + 70);
-		if (lives < 10) {
+		if (lives < 20) {
 			state = States::ONEHEAD;
 			rigthHead->pendingToDelete = true;
 			rigthHead = nullptr;

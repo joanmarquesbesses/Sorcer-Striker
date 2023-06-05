@@ -194,7 +194,7 @@ void ModuleBoost::SpawnBoost(const BoostSpawnpoint& info)
 				Boosts[i]->textureBoost = texture_CoinBag;
 				break;
 			case Boost_Type::AXE:
-				Boosts[i] = new Boost_Coin(info.x, info.y);
+				Boosts[i] = new Boost_Axe(info.x, info.y);
 				Boosts[i]->destroyedFx = boostFX;
 				Boosts[i]->textureBoostBox = textureBox_Axe;
 				Boosts[i]->textureBoost = textureBoost_Axe;

@@ -67,6 +67,31 @@ ModuleParticles::ModuleParticles(bool startEnabled) : Module(startEnabled)
 	specialShoot.anim.loop = false;
 	specialShoot.lifetime = 30;
 
+	LeftAxe.anim.PushBack({ 0, 48, 21, 23 });
+	LeftAxe.anim.PushBack({ 27, 48, 21, 23 });
+	LeftAxe.anim.PushBack({ 0, 69, 21, 23 });
+	LeftAxe.anim.PushBack({ 25, 69, 21, 23 });
+	LeftAxe.anim.PushBack({ 0, 94, 21, 23 });
+	LeftAxe.anim.PushBack({ 25, 94, 21, 23 });
+	LeftAxe.anim.PushBack({ 0, 118, 21, 23 });
+	LeftAxe.anim.PushBack({ 25, 118, 21, 23 });
+	LeftAxe.anim.loop = true;
+	LeftAxe.lifetime = 100;
+	LeftAxe.speed.y = -20;
+	LeftAxe.speed.x = -2;
+
+	RigthAxe.anim.PushBack({ 0, 148, 21, 23 });
+	RigthAxe.anim.PushBack({ 27, 148, 21, 23 });
+	RigthAxe.anim.PushBack({ 0, 173, 21, 23 });
+	RigthAxe.anim.PushBack({ 25, 173, 21, 23 });
+	RigthAxe.anim.PushBack({ 0, 199, 21, 23 });
+	RigthAxe.anim.PushBack({ 25, 199, 21, 23 });
+	RigthAxe.anim.PushBack({ 0, 222, 21, 23 });
+	RigthAxe.anim.PushBack({ 25, 222, 21, 23 });
+	RigthAxe.anim.loop = true;
+	RigthAxe.lifetime = 100;
+	RigthAxe.speed.y = -20;
+	RigthAxe.speed.x = 2;
 }
 
 ModuleParticles::~ModuleParticles()

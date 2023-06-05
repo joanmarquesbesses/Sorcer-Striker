@@ -123,7 +123,7 @@ bool SceneLevel1::Start()
 
 // ----------------------------AGUA---------------------------- //
 
-	App->boost->AddBoost(Boost_Type::LASERFIST, 120, -5850);// BOOST
+	App->boost->AddBoost(Boost_Type::AXE, 120, -5850);// BOOST
 	App->boost->AddBoost(Boost_Type::COINBAG, 120, -6000);//-1800
 
 	App->enemies->AddEnemy(Enemy_Type::BROWNSHIP, 50, -5850, 0);
@@ -238,7 +238,7 @@ bool SceneLevel1::Start()
 // -------------------------ALDEA------------------------- //
 
 	App->boost->AddBoost(Boost_Type::COINBAG, 120, -11000);//-1800
-	App->boost->AddBoost(Boost_Type::LASERFIST, 120, -10850);// BOOST
+	App->boost->AddBoost(Boost_Type::AXE, 120, -10850);// BOOST
 
 	App->enemies->AddEnemy(Enemy_Type::TANK, 320, -10850, 0);//-1800
 	App->enemies->AddEnemy(Enemy_Type::TANK, 280, -10850, 0);
@@ -409,6 +409,8 @@ bool SceneLevel1::Start()
 	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17900, 3);
 	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -17950, 3);
 	App->enemies->AddEnemy(Enemy_Type::REDBIRD, 200, -18000, 3);
+
+	App->boost->AddBoost(Boost_Type::AXE, 120, -18000);// BOOST
 
 	// -------------------------FIN------------------------- //
 

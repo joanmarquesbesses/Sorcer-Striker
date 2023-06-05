@@ -69,6 +69,9 @@ public:
 	Particle finalbossfireball;
 	Particle specialShoot;
 
+	Particle LeftAxe;
+	Particle RigthAxe;
+
 private:
 	// Particles spritesheet loaded into an SDL Texture
 	SDL_Texture* texture = nullptr;
